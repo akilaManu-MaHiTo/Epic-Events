@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+body{
+	background-image: radial-gradient(white 0.5%, black 45%);
+	
+}
+h1{
+	text-align:center;
+	color:#eccb77;;
+}
+
+
+h2{
+	color:white;
+	position:relative;
+	right:-316px;
+	top:25px;
+}
+
+.y{
+	color:white;
+	position:relative;
+	right:-714px;
+	top:-239px;
+	font-size:20px;
+}
+
+
+.x{
+	color:white;
+	position:relative;
+	right:-329px;
+	top:-11px;
+	font-size:20px;
+}
+.p{
+	position:relative;
+	top:-236px;
+	height:572px;
+	width:1172px;
+	right:-267px;
+	border-color:#eccb77;
+	border-style:solid;
+}
+

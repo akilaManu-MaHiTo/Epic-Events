@@ -1,0 +1,6 @@
+|   IT number  |        Name         |         E-mail           |          Contribution        |
+
+| IT22262554   | A.M.Senarathna      | it22262554@my.sliit.lk   | Event Plan Management        |
+| IT22091734   | B.D.Somarathne      | it22091734@my.sliit.lk   | Event Services Management    |
+| IT22134776   | L.S.B.Hemarathne    | it22134776@my.sliit.lk   | Event Payment Management     |
+| IT22081148   | S.A.M.M.Abeysinghe  | it22081148@my.sliit.lk   | Event Venue Management       |

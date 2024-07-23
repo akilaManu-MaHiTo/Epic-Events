@@ -1,0 +1,10 @@
+.left-section{   
+    background: linear-gradient(to left, #807d79, black); 
+    width:50%;
+    float:left;
+}
+.right-section{
+	background: linear-gradient(to right, #807d79, black);    
+	width:50%;
+    float:right;
+}

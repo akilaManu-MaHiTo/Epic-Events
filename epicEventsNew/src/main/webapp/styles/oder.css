@@ -1,0 +1,412 @@
+body{
+	margin-top: 50px;
+	margin-left: 230px;
+	margin-right: 230px;
+	background-color:black;	
+	overflow-x: hidden;
+}
+/*Navigation Bar */
+.list{
+	font-family: "Tangerine", cursive;
+  	font-weight: 700;
+  	font-style: normal;
+  	font-size: 20px;
+}
+
+.navi ul li a{
+	text-decoration: none;
+	color: #eccb77;
+	
+}
+.navi li{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 60px;
+}
+
+.navi{
+	position: relative;
+	top: -180px;
+	bottom: 0px;
+	left:378px;
+}
+
+
+.styled-image {
+	position: relative;
+	top: 10px;
+    width: 300px;
+    height: auto;
+    
+}
+#sign{
+	position: relative;
+	top: -300px;
+	bottom: 0px;
+	right: 0px;
+	left: 1435px;
+	
+	width:75px;
+	height: 25px;
+
+	padding-top: 5px;
+	
+	border-radius: 3px;
+	border: solid 0.5px black;
+	
+	background-color: #eccb77;
+	color: black;
+	
+	font-family: "Madimi One", sans-serif;
+	text-align: center;
+}
+
+#sign:hover{
+	
+	cursor:pointer;
+}
+#log{
+	position: relative;
+	top: -332px;
+	bottom: 0px;
+	right: 0px;
+	left: 1520px;
+	
+	width:75px;
+	height: 26px;
+	
+	padding-top: 5px;
+
+	
+	border-radius: 3px;
+	border: solid 0.5px black;
+	
+	background-color: #eccb77;
+	color: black;
+	
+	font-family: "Madimi One", sans-serif;
+	text-align: center;
+}
+#log:hover{
+	
+	cursor:pointer;
+}
+
+
+.titlebtn{
+	position: relative;
+	right: -40px;
+	left: auto;
+	top:auto;
+	margin-bottom: 90px;
+}
+
+/* body */
+
+.title {
+	color:goldenrod;
+	font-size: 40px;
+	position: relative;
+	text-align: center;
+	top: -70px;
+}
+
+.mainb {
+	border: 1px solid gold;
+	right: auto;
+	left: 225px;
+	top: -167px;
+	margin: 0;
+    max-width: 1300px;
+	min-height: 500px;
+	max-height: 1000px;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #162d44, #000000);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+	position: relative; 
+	margin-top: -130px;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+h3 {
+	color: #eee;
+	font-weight: 100;
+}
+
+h5 {
+	color: #eee;
+	font-weight: 300;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #ddd;
+}
+
+
+.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+h3 {
+	color: #eee;
+	font-weight: 100;
+}
+
+h5 {
+	color: #eee;
+	font-weight: 300;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.lefts {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -85px;
+}
+
+.Lside {
+    width: 680px;
+    margin-right: 20px;
+}
+
+.lsub h1 {
+    position: relative;
+    right: auto;
+    top: auto;
+    left: auto;
+}
+
+.lopt {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.lopt button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 50%;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    margin-bottom: 20px;
+}
+
+.lopt button:hover {
+    background: gold;
+    border: 1px solid black;
+    color: black;
+}
+
+.Rside {
+    width: 680px;
+    margin-left: auto;
+}
+
+.rsub h1 {
+    position: relative;
+    right: auto;
+    top: auto;
+    left: auto;
+}
+
+.ropt {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ropt button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 50%;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.ropt button:hover {
+    background: gold;
+    border: 1px solid black;
+    color: black;
+}
+
+
+.ropt button:hover {
+    background: gold;
+    border: 1px solid black;
+    color: black;
+}
+
+
+
+
+.backbtn {
+    background-color: transparent;
+    border: 2px solid goldenrod;
+    color: goldenrod;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.backbtn:hover {
+    background-color: goldenrod;
+    color: black;
+    border-color: transparent;
+}
+
+/*
+.lopt button {
+    position: relative;
+    cursor: pointer;
+    right: -210px;
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    border: 1px solid gold;
+    background: black;
+    color: gold; 
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s, color 0.3s; 
+}
+
+.lopt button:hover { 
+    background: gold;
+    border: 1px solid black;
+    color: black; 
+}
+*/
+
+.lopt {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.price-info {
+    margin-right: 16px; 
+}
+
+.lopt button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    margin: initial;
+    margin-left: -100px;
+
+}
+
+.lopt button:hover {
+    background: gold;
+    border: 1px solid black;
+    color: black;
+}
+
+.ropt button.minusbtn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.ropt button.minusbtn:hover {
+    background: gold;
+    border: 1px solid black;
+    color: black;
+}
+
+.lefts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    position: relative; /* Add relative positioning */
+}
+
+.Lside {
+    width: calc(50% - 10px);
+    margin-right: 40px;
+    margin-left: 60px;
+}
+
+.Rside {
+    width: calc(50% - 10px);
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+/* Vertical line between Lside and Rside */
+.lefts::before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    bottom: 20px;
+    left: 50%; /* Position the line in the middle */
+    border-left: 2px solid gold; /* Style the line */
+}

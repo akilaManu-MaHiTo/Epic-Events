@@ -1,0 +1,783 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Scrollbar setup*/
+::-webkit-scrollbar {
+	width: 1.3rem;
+}
+
+::-webkit-scrollbar-track{
+	background: rgb(0, 0, 0);
+	margin-block: 0.25rem;
+  border-radius: 100vw;
+}
+
+
+::-webkit-scrollbar-thumb{
+	background: rgb(228, 185, 12);
+	border-radius: 50vw;
+}
+
+/*General Styles*/
+body {
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 230px;
+	background-color:black;	
+	overflow-x: hidden;
+	background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(183, 140, 30));
+	background-size: 400% 400%;
+	height: 100vh;
+}
+
+.container {
+    width: 90%;
+    border: 1px solid gold;
+    position: relative;
+    bottom: 60px;
+    left: 190px;
+    /* max-width: 1000px; */
+    padding: 30px;
+    margin: auto;
+    margin-right: 203px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to bottom right, rgb(47, 47, 47), rgb(0, 0, 0));
+}
+
+.proceedtitle {
+    color: gold;
+    position: relative;
+    right: 22px;
+    margin-bottom: 80px;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+.card-logo {
+    width: 98px;
+    height: auto;
+}
+
+/* Card General Styles */
+.card {
+    width: 100%;
+	max-width: 550px;
+	position: relative;
+    color: #fff;
+    transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+    cursor: pointer;
+	z-index: 2;
+	border-radius: 1.5rem;
+}
+
+.card.active {
+	transform: rotateY(180deg);
+}
+
+.card > div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 6px 20px 5px rgb(0 0 0 / 13%);
+}
+
+/* Front Card */
+.card .front {
+    width: 100%;
+    background: black;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1 -1 2px #aaa, 1 1 2px #555;
+    backdrop-filter: blur(0.65rem);
+    border: 2px solid gold;
+    -webkit-backdrop-filter: blur(0.65rem);
+    
+    
+}
+
+.front .brand-logo {
+	text-align: right;
+	min-height: 50px;
+}
+
+.front .brand-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	max-width: 80px;
+}
+
+.front .chip {
+	width: 100%;
+	max-width: 50px;
+	margin-bottom: 20px;
+}
+
+.front .group .label {
+    font-size: 16px;
+    color: #404243;
+    -webkit-text-stroke: 0.15px #ffd012;
+    margin-bottom: 5px;
+}
+
+.front .group .number,
+.front .group .name,
+.front .group .expiration {
+	color: #9f9c7f;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.front .flexbox {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+/* ---------- Back Card ----------*/
+.back {
+	background: linear-gradient(
+		to bottom right,
+		rgb(0, 0, 0),
+		rgb(0, 0, 0)
+	);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5),
+	-1 -1 2px #000000,
+	1 1 2px #000000;
+	backdrop-filter: blur(0.8rem);
+	-webkit-backdrop-filter: blur(0.8rem);
+	
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.back .magnetic-bar {
+	height: 40px;
+	background: #292929;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+
+.back .details {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.back .details p {
+	margin-bottom: 5px;
+	color: gray;
+}
+
+.back .details #signature {
+	width: 70%;
+  color: #000; 
+}
+
+.back .details #signature .signature {
+	height: 40px;
+	background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.back .details #signature .signature p{
+	line-height: 40px;
+	font-family: 'Liu Jian Mao Cao', cursive;
+	color: #000;
+	font-size: 30px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+
+.back .details #ccv {
+	width: 20%;
+  color: #000;
+}
+
+.back .details #ccv .ccv {
+	background: #fff;
+	height: 40px;
+	color: #000;
+	padding: 10px;
+	text-align: center;
+}
+
+.back .legend {
+	font-size: 14px;
+	line-height: 24px;
+    color: rgb(97, 94, 94);
+}
+
+.back .bank-link {
+	font-family: "Pacifico", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+	font-size:18px;
+	text-decoration: none;
+    color: #b18f03;
+}
+
+/* ---------- Contenedor Boton ----------*/
+.container-btn .btn-open-form {
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 20px;
+	background: rgb(67, 66, 66);
+	color: #fff;
+	position: relative;
+	top: -25px;
+	z-index: 3;
+	border-radius: 100%;
+	padding: 5px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.container-btn .btn-open-form:hover {
+	background: rgb(228, 185, 12);
+}
+
+.container-btn .btn-open-form.active {
+	transform: rotate(45deg);
+}
+
+
+/* ---------- Card Form ----------*/
+.card-form {
+    background: rgb(96 96 94 / 40%);
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-form.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.card-form label {
+    display: block;
+    color: #e6aa25;
+    -webkit-text-stroke: 0.1px #574105;
+    margin-bottom: 5px;
+    font-size: 19px;
+}
+
+.card-form  input,
+.card-form  select,
+.btn-submit {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+
+.card-form input:hover,
+.card-form select:hover {
+	border: 2px solid #93BDED;
+}
+
+.card-form input:focus,
+.card-form select:focus {
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+.card-form input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.card-form .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-form .expire {
+	width: 100%;
+}
+
+.card-form .ccv {
+	min-width: 100px;
+}
+
+.card-form .group-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+
+.card-form select {
+	-webkit-appearance: none;
+}
+
+.card-form .group-select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+
+.card-form .group-select:hover i {
+	color: #93bfed;
+}
+
+.card-form .btn-submit {
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    background: #a47612;
+    box-shadow: 2px 2px 10px 0px rgb(5 7 10 / 40%);
+    cursor: pointer;
+}
+.card-form .btn-submit:hover {
+	background: rgb(0, 0, 0);
+	color: white;
+}
+
+.Btn {
+  width: 641px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 200%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "Pay Now";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* Navigation Bar */
+
+.list{
+	font-family: "Tangerine", cursive;
+  	font-weight: 700;
+  	font-style: normal;
+  	font-size: 20px;
+}
+
+.navi ul li a{
+	text-decoration: none;
+	color: #eccb77;
+	
+}
+.navi li{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 60px;
+}
+
+.navi{
+	position: relative;
+	top: -180px;
+	bottom: 0px;
+	left:378px;
+}
+
+
+.styled-image {
+	position: relative;
+	top: 10px;
+    width: 300px;
+    height: auto;
+    
+}
+#sign{
+	position: relative;
+	top: -300px;
+	bottom: 0px;
+	right: 0px;
+	left: 1435px;
+	
+	width:75px;
+	height: 25px;
+
+	padding-top: 5px;
+	
+	border-radius: 3px;
+	border: solid 0.5px black;
+	
+	background-color: #eccb77;
+	color: black;
+	
+	font-family: "Madimi One", sans-serif;
+	text-align: center;
+}
+
+#sign:hover{
+	
+	cursor:pointer;
+}
+#log{
+	position: relative;
+	top: -332px;
+	bottom: 0px;
+	right: 0px;
+	left: 1520px;
+	
+	width:75px;
+	height: 26px;
+	
+	padding-top: 5px;
+
+	
+	border-radius: 3px;
+	border: solid 0.5px black;
+	
+	background-color: #eccb77;
+	color: black;
+	
+	font-family: "Madimi One", sans-serif;
+	text-align: center;
+}
+#log:hover{
+	
+	cursor:pointer;
+}
+
+
+.titlebtn{
+	position: relative;
+	right: -40px;
+	left: auto;
+	top:auto;
+}
+
+
+
+/* footer */
+
+.epic {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  right:49px;
+  top:241px;
+}
+
+.rights {
+	  position: relative;
+	  right:756px;
+  	  top:282px;
+}
+
+.con {
+  padding-left: 186px;
+}
+.box {
+  display: inline-block;
+}
+
+.quote {
+  font-size: 60px;
+  position: relative;
+  left: -100px;
+  bottom: -53px;
+  color: #f1c62b;
+  font-family: "League Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  
+}
+
+.icons {
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  font-size: 22px;
+  margin-left: 50px;
+  position: relative;
+  left: 115px;
+}
+
+.icons a {
+  padding: 5px;
+  color: #ffffff71;
+}
+
+.fab{
+  transition: 0.5s;
+}
+
+.fab:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #f5f5f5;
+  background-color: #191919;
+  border-top: 2px solid #eccb77;
+}
+
+
+
+.logo {
+  width: auto;
+  height: 150px;
+  position: relative;
+  left: 116px;
+}
+
+.footer {
+  width:1920px;
+  position:relative;
+  left:-100px;
+  top:0px;
+}
+
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+footer__addr{
+  width: 1920px;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgba(146, 146, 146, 0.825);
+  border-radius: 100px;
+  color: #000000;
+  line-height: 0;
+  margin: 0.6em 0;
+  margin-left: 70px;
+  font-size: 1rem;
+  padding: 0 1.3em;
+  position: relative;
+  left: 114px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+/*footer end */
+
+
+
+/* Loader End */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for blur effect */
+  backdrop-filter: blur(5px); /* Apply blur effect to background */
+  z-index: 1000; /* Ensure loader appears on top of everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s 2s forwards; /* Apply fade-out animation to the preloader */
+  pointer-events: none; /* Disable pointer events on the preloader */
+}
+
+#loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: rgb(228, 185, 12);
+  animation: spin 2s linear infinite; /* Remove fadeOut animation from the loader */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: none; /* Remove the blur effect after fading out */
+  }
+}
+
+/* Loader End */
+
+
+
+
+
